@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="DoniConnect — Donimalai & Sandur's trusted local platform for services, buying and selling.">
+<meta name="keywords" content="DoniConnect, Donimalai, Sandur, local services, plumber, electrician, carpenter, second hand bikes, Karnataka, Bellary, Hospet">
+<meta property="og:title" content="DoniConnect — ನಮ್ಮ ಊರು, ನಮ್ಮ ಸೇವೆ">
+<meta property="og:description" content="Buy, Sell, Book Services — All in One Place. Serving Donimalai, Sandur & Bellary Belt.">
+<meta property="og:type" content="website">
+<title>DoniConnect — ನಮ್ಮ ಊರು, ನಮ್ಮ ಸೇವೆ | Donimalai & Sandur</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Noto+Sans+Kannada:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root{
+  --green:#1D9E75;--green-dark:#0F6E56;--green-light:#E1F5EE;
+  --cream:#FAEEDA;--text:#1a1a1a;--muted:#5a5a5a;
+  --border:#e0e0e0;--white:#fff;--red:#e53935;
+  --shadow:0 4px 24px rgba(0,0,0,0.09);--radius:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;color:var(--text);background:#fff;line-height:1.6}
+.kn{font-family:'Noto Sans Kannada',sans-serif}
+a{text-decoration:none;color:inherit}
+
+/* ── NAV ── */
+nav{position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px solid var(--border);padding:0 1.2rem}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{display:flex;align-items:center;gap:8px;font-size:1.25rem;font-weight:800;color:var(--green-dark)}
+.logo i{color:var(--green);font-size:1.1rem}
+.nav-links{display:flex;align-items:center;gap:1.4rem;list-style:none}
+.nav-links a{font-size:.85rem;font-weight:500;color:var(--muted);transition:.2s}
+.nav-links a:hover{color:var(--green)}
+.nav-wa{background:var(--green);color:#fff!important;padding:.38rem 1rem;border-radius:50px;font-size:.8rem;font-weight:600;display:flex;align-items:center;gap:5px}
+.nav-wa:hover{background:var(--green-dark)!important}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.burger span{width:23px;height:2px;background:var(--text);border-radius:2px;transition:.3s}
+.mob-menu{display:none;flex-direction:column;background:#fff;border-bottom:1px solid var(--border);padding:.8rem 1.2rem}
+.mob-menu a{padding:.55rem 0;font-size:.9rem;font-weight:500;color:var(--muted);border-bottom:1px solid #f2f2f2;display:block}
+.mob-menu .nav-wa{margin-top:.6rem;justify-content:center}
+.mob-menu.open{display:flex}
+
+/* ── HERO ── */
+.hero{background:linear-gradient(135deg,#0a5c45 0%,#0F6E56 35%,#1D9E75 70%,#27b887 100%);color:#fff;padding:5rem 1.2rem 4.5rem;text-align:center;position:relative;overflow:hidden}
+.hero::before,.hero::after{content:'';position:absolute;border-radius:50%;background:rgba(255,255,255,.05)}
+.hero::before{width:340px;height:340px;top:-80px;right:-80px}
+.hero::after{width:260px;height:260px;bottom:-100px;left:-60px}
+.hero-inner{max-width:780px;margin:0 auto;position:relative;z-index:1}
+.hero-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);border-radius:50px;padding:.3rem 1rem;font-size:.78rem;font-weight:600;margin-bottom:1.3rem;letter-spacing:.04em}
+.hero h1{font-size:clamp(1.75rem,5vw,2.9rem);font-weight:800;line-height:1.2;margin-bottom:.7rem}
+.hero-kn{font-size:1.05rem;opacity:.9;margin-bottom:.5rem}
+.hero p{font-size:.95rem;opacity:.82;margin-bottom:2rem;max-width:540px;margin-left:auto;margin-right:auto}
+.hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:2rem}
+.btn-white{background:#fff;color:var(--green-dark);padding:.72rem 1.8rem;border-radius:9px;font-weight:700;font-size:.92rem;border:none;cursor:pointer;transition:.2s;display:inline-flex;align-items:center;gap:7px}
+.btn-white:hover{background:var(--cream)}
+.btn-border{background:transparent;color:#fff;padding:.72rem 1.8rem;border-radius:9px;font-weight:700;font-size:.92rem;border:2px solid rgba(255,255,255,.65);cursor:pointer;transition:.2s;display:inline-flex;align-items:center;gap:7px}
+.btn-border:hover{background:rgba(255,255,255,.12)}
+.badges{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem}
+.badge{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.28);border-radius:50px;padding:.28rem .85rem;font-size:.76rem;font-weight:500}
+
+/* ── SECTION BASE ── */
+section{padding:4rem 1.2rem}
+.container{max-width:1200px;margin:0 auto}
+.sec-tag{display:inline-block;background:var(--green-light);color:var(--green-dark);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.28rem .85rem;border-radius:50px;margin-bottom:.8rem}
+.sec-title{font-size:clamp(1.45rem,3vw,2.1rem);font-weight:800;margin-bottom:.45rem}
+.sec-sub{color:var(--muted);font-size:.92rem;max-width:540px;margin-bottom:2.5rem}
+.bg-light{background:#f8f8f8}
+.bg-cream{background:var(--cream)}
+
+/* ── SERVICES ── */
+.cat-label{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green);border-bottom:2px solid var(--green-light);padding-bottom:.45rem;margin:2.2rem 0 1rem;display:flex;align-items:center;gap:.5rem}
+.cat-label:first-of-type{margin-top:0}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.scard{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:1.3rem;transition:.22s;cursor:default}
+.scard:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.scard-icon{font-size:2rem;margin-bottom:.55rem;display:block}
+.scard h3{font-size:.93rem;font-weight:700;margin-bottom:.28rem}
+.scard p{font-size:.78rem;color:var(--muted);margin-bottom:.85rem;line-height:1.45}
+.enquire-btn{display:inline-flex;align-items:center;gap:5px;background:var(--green-light);color:var(--green-dark);font-size:.74rem;font-weight:600;padding:.3rem .85rem;border-radius:7px;transition:.2s;border:none;cursor:pointer;font-family:'Poppins',sans-serif}
+.scard:hover .enquire-btn{background:var(--green);color:#fff}
+
+/* ── HOW IT WORKS ── */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2rem;position:relative}
+.steps::before{content:'';position:absolute;top:36px;left:calc(16.66% + 12px);right:calc(16.66% + 12px);height:2px;background:var(--green-light);z-index:0}
+.step{text-align:center;padding:2rem 1.5rem;background:#fff;border:1px solid var(--border);border-radius:var(--radius);position:relative;z-index:1}
+.step-num{width:52px;height:52px;border-radius:50%;background:var(--green);color:#fff;font-size:1.2rem;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem}
+.step h3{font-size:.98rem;font-weight:700;margin-bottom:.38rem}
+.step p{font-size:.82rem;color:var(--muted);line-height:1.5}
+
+/* ── STATS ── */
+.stats-strip{background:linear-gradient(135deg,var(--green-dark),var(--green));color:#fff;padding:3rem 1.2rem}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;max-width:960px;margin:0 auto;text-align:center}
+.stat-n{font-size:2.6rem;font-weight:800;display:block;line-height:1}
+.stat-l{font-size:.83rem;opacity:.85;margin-top:.3rem}
+
+/* ── FORMS ── */
+.forms-wrap{display:grid;grid-template-columns:3fr 2fr;gap:2rem;align-items:start}
+.fbox{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:2rem}
+.fbox h2{font-size:1.25rem;font-weight:800;margin-bottom:.25rem}
+.fbox .fsub{font-size:.82rem;color:var(--muted);margin-bottom:1.5rem}
+.fsec{font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--green);border-left:3px solid var(--green);padding-left:.55rem;margin:1.5rem 0 .8rem}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.fg{margin-bottom:.75rem}
+.fg label{display:block;font-size:.78rem;font-weight:600;margin-bottom:.28rem}
+.fg input,.fg select,.fg textarea{width:100%;border:1.5px solid var(--border);border-radius:8px;padding:.58rem .8rem;font-size:.82rem;font-family:'Poppins',sans-serif;color:var(--text);background:#fff;transition:.2s;outline:none}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--green)}
+.fg textarea{resize:vertical;min-height:76px}
+.fg .err{color:var(--red);font-size:.72rem;margin-top:.22rem;display:none}
+.fg.bad input,.fg.bad select,.fg.bad textarea{border-color:var(--red)}
+.fg.bad .err{display:block}
+.pfx-wrap{display:flex}
+.pfx{background:#f2f2f2;border:1.5px solid var(--border);border-right:none;border-radius:8px 0 0 8px;padding:.58rem .65rem;font-size:.82rem;font-weight:600;color:var(--muted);white-space:nowrap}
+.pfx-wrap input{border-radius:0 8px 8px 0}
+.cb-group,.rb-group{display:flex;flex-wrap:wrap;gap:.4rem .75rem;margin-top:.3rem}
+.cb-group label,.rb-group label{display:flex;align-items:center;gap:.3rem;font-size:.78rem;font-weight:400;cursor:pointer}
+.cb-group input,.rb-group input{width:auto;margin:0;accent-color:var(--green)}
+.char-row{font-size:.72rem;color:var(--muted);text-align:right;margin-top:.18rem}
+.same-row{display:flex;align-items:center;gap:.35rem;font-size:.78rem;cursor:pointer;margin-top:.3rem}
+.same-row input{width:auto;accent-color:var(--green)}
+#shop-row{display:none}
+.submit-btn{width:100%;background:var(--green);color:#fff;border:none;border-radius:9px;padding:.88rem;font-size:.98rem;font-weight:700;cursor:pointer;transition:.2s;margin-top:1rem;font-family:'Poppins',sans-serif;display:flex;align-items:center;justify-content:center;gap:8px}
+.submit-btn:hover{background:var(--green-dark)}
+.submit-note{font-size:.73rem;color:var(--muted);text-align:center;margin-top:.5rem}
+.ok-msg{display:none;background:#E1F5EE;border:1px solid var(--green);border-radius:9px;padding:1rem 1.2rem;color:var(--green-dark);font-size:.88rem;font-weight:600;margin-top:1rem;text-align:center}
+
+/* ── TESTIMONIALS ── */
+.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.tcard{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;transition:.22s}
+.tcard:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.stars{color:#f59e0b;font-size:.88rem;margin-bottom:.7rem}
+.ttext{font-size:.87rem;color:var(--muted);line-height:1.6;margin-bottom:1rem;font-style:italic}
+.tauthor{display:flex;align-items:center;gap:.65rem}
+.tavatar{width:40px;height:40px;border-radius:50%;color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:.88rem;flex-shrink:0}
+.tname{font-size:.83rem;font-weight:700}
+.tloc{font-size:.72rem;color:var(--muted)}
+
+/* ── FOOTER ── */
+footer{background:#0b1a14;color:#bbb;padding:3rem 1.2rem 1.5rem}
+.fg-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2rem;max-width:1200px;margin:0 auto;padding-bottom:2rem;border-bottom:1px solid #1a3328}
+.fb-logo{font-size:1.35rem;font-weight:800;color:#fff;display:flex;align-items:center;gap:.4rem;margin-bottom:.45rem}
+.fb-logo i{color:var(--green)}
+.fb-tag{font-size:.78rem;opacity:.65;margin-bottom:.8rem}
+.fc a{display:flex;align-items:center;gap:.4rem;font-size:.8rem;color:#9de;margin-bottom:.3rem;transition:.2s}
+.fc a:hover{color:#fff}
+.fh{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin-bottom:.75rem}
+.fl{list-style:none}
+.fl li{margin-bottom:.38rem}
+.fl a{font-size:.8rem;color:#bbb;transition:.2s}
+.fl a:hover{color:#fff}
+.socials{display:flex;gap:.55rem;margin-top:.75rem}
+.socials a{width:33px;height:33px;border-radius:50%;background:#1a3328;color:#bbb;display:flex;align-items:center;justify-content:center;font-size:.82rem;transition:.2s}
+.socials a:hover{background:var(--green);color:#fff}
+.fbot{max-width:1200px;margin:.2rem auto 0;padding-top:1.2rem;display:flex;justify-content:space-between;font-size:.76rem;opacity:.55;flex-wrap:wrap;gap:.5rem}
+
+/* ── WA FLOAT ── */
+.wa-btn{position:fixed;bottom:22px;right:22px;z-index:999;background:#25D366;color:#fff;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;text-decoration:none;transition:.2s}
+.wa-btn:hover{transform:scale(1.1)}
+.wa-btn::before{content:'Chat with DoniConnect';position:absolute;right:66px;background:#111;color:#fff;font-size:.73rem;padding:.3rem .7rem;border-radius:6px;white-space:nowrap;opacity:0;pointer-events:none;transition:.2s;font-family:'Poppins',sans-serif}
+.wa-btn:hover::before{opacity:1}
+@keyframes wa-pulse{0%,100%{box-shadow:0 0 0 0 rgba(37,211,102,.4)}70%{box-shadow:0 0 0 12px rgba(37,211,102,0)}}
+.wa-btn{animation:wa-pulse 2.2s infinite}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .fg-grid{grid-template-columns:1fr 1fr}
+  .forms-wrap{grid-template-columns:1fr}
+}
+@media(max-width:768px){
+  .nav-links{display:none}.burger{display:flex}
+  .grid3{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr}.steps::before{display:none}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .test-grid{grid-template-columns:1fr}
+  .fg-grid{grid-template-columns:1fr}
+  .frow{grid-template-columns:1fr}
+  .fbot{justify-content:center;text-align:center}
+}
+@media(max-width:480px){
+  .grid3{grid-template-columns:1fr}
+  .hero h1{font-size:1.6rem}
+  .hero-btns{flex-direction:column;align-items:center}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo"><i class="fas fa-house-medical"></i>DoniConnect</a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#services">Buy &amp; Sell</a></li>
+      <li><a href="#register">Register</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="https://wa.me/919686324765" class="nav-wa" target="_blank"><i class="fab fa-whatsapp"></i>Chat with us</a></li>
+    </ul>
+    <div class="burger" id="burger"><span></span><span></span><span></span></div>
+  </div>
+  <div class="mob-menu" id="mob-menu">
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#services">Buy &amp; Sell</a>
+    <a href="#register">Register</a>
+    <a href="#contact">Contact</a>
+    <a href="https://wa.me/919686324765" class="nav-wa" target="_blank"><i class="fab fa-whatsapp"></i> Chat with us</a>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-tag"><i class="fas fa-map-marker-alt"></i>Serving Donimalai · Sandur · Hospet · Bellary Belt</div>
+    <h1>Donimalai &amp; Sandur's Trusted Local Platform</h1>
+    <p class="hero-kn kn">ನಮ್ಮ ಊರು, ನಮ್ಮ ಸೇವೆ — Our Town, Our Service</p>
+    <p>Buy, Sell, Book Services — All in One Place.<br>Connecting our community every single day.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-white"><i class="fas fa-calendar-check"></i>Book a Service</a>
+      <a href="#services" class="btn-border"><i class="fas fa-store"></i>Browse Products</a>
+    </div>
+    <div class="badges">
+      <span class="badge">✓ Local Experts</span>
+      <span class="badge">✓ Verified Providers</span>
+      <span class="badge">✓ Cash on Delivery</span>
+      <span class="badge">✓ Kannada Support</span>
+      <span class="badge">✓ Telugu Support</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SERVICES ═══ -->
+<section id="services" class="bg-light">
+  <div class="container">
+    <span class="sec-tag">What We Offer</span>
+    <h2 class="sec-title">All Services Under One Roof</h2>
+    <p class="sec-sub">From second-hand goods to skilled trades and creative digital work — find everything you need in your own neighbourhood.</p>
+
+    <div class="cat-label"><i class="fas fa-tag"></i> Reselling &amp; Products</div>
+    <div class="grid3">
+      <div class="scard"><span class="scard-icon">🏍️</span><h3>Vehicles</h3><p>Second-hand bikes, scooters, mopeds and cars at the best local prices. Verified by our team.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-phone"></i>Enquire Now</button></div>
+      <div class="scard"><span class="scard-icon">📱</span><h3>Electronics &amp; Gadgets</h3><p>Phones, laptops, cameras, earphones and smartwatches — affordable and tested.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-phone"></i>Enquire Now</button></div>
+      <div class="scard"><span class="scard-icon">🛋️</span><h3>Furniture &amp; Appliances</h3><p>Fans, coolers, tables, chairs, geysers and utensils in good condition at low prices.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-phone"></i>Enquire Now</button></div>
+      <div class="scard"><span class="scard-icon">👗</span><h3>Clothing &amp; Fashion</h3><p>Branded clothes, thrift items, kids wear, sarees and jewellery sets — best local deals.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-phone"></i>Enquire Now</button></div>
+      <div class="scard"><span class="scard-icon">♻️</span><h3>Scrap &amp; Recyclables</h3><p>Metal, paper, e-waste and plastic collection. Best rates from verified local buyers.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-phone"></i>Enquire Now</button></div>
+    </div>
+
+    <div class="cat-label"><i class="fas fa-wrench"></i> Home Repair &amp; Skilled Trades</div>
+    <div class="grid3">
+      <div class="scard"><span class="scard-icon">🔧</span><h3>Plumbing</h3><p>Pipe leaks, tap repairs, tank cleaning and new pipe fitting. Fast local response guaranteed.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-phone"></i>Enquire Now</button></div>
+      <div class="scard"><span class="scard-icon">🏗️</span><h3>Civil &amp; Masonry</h3><p>Plastering, tiles fixing, waterproofing, wall painting and POP work by experienced masons.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-phone"></i>Enquire Now</button></div>
+      <div class="scard"><span class="scard-icon">⚡</span><h3>Electrical Work</h3><p>Wiring, switch repairs, fan fitting, inverter service, CCTV and DTH installation.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-phone"></i>Enquire Now</button></div>
+      <div class="scard"><span class="scard-icon">🪵</span><h3>Carpentry</h3><p>Door and window repairs, furniture polishing, custom shelves and rack making.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-phone"></i>Enquire Now</button></div>
+      <div class="scard"><span class="scard-icon">❄️</span><h3>AC &amp; Appliance Repair</h3><p>AC servicing and gas refill, washing machine, fridge and geyser repairs.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-phone"></i>Enquire Now</button></div>
+      <div class="scard"><span class="scard-icon">🧹</span><h3>Cleaning Services</h3><p>Deep home cleaning, sofa and carpet cleaning, post-construction and office cleaning.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-phone"></i>Enquire Now</button></div>
+    </div>
+
+    <div class="cat-label"><i class="fas fa-palette"></i> Creative &amp; Digital Services</div>
+    <div class="grid3">
+      <div class="scard"><span class="scard-icon">🎨</span><h3>Design Services</h3><p>Wedding invitations, banners, flex boards, logos, visiting cards, menus and brochures.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-phone"></i>Enquire Now</button></div>
+      <div class="scard"><span class="scard-icon">📸</span><h3>Photo &amp; Video Editing</h3><p>Wedding album editing, reels and short videos, background removal and retouching.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-phone"></i>Enquire Now</button></div>
+      <div class="scard"><span class="scard-icon">⌨️</span><h3>Typing &amp; DTP</h3><p>Affidavits, form filling, government applications, resume design and translation work.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-phone"></i>Enquire Now</button></div>
+      <div class="scard"><span class="scard-icon">🎓</span><h3>Tuition &amp; Coaching</h3><p>School subjects, computer and MS Office classes, spoken English and hobby coaching.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-phone"></i>Enquire Now</button></div>
+      <div class="scard"><span class="scard-icon">🍱</span><h3>Home Food &amp; Tiffin</h3><p>Daily tiffin delivery, small event catering, homemade pickles, snacks and sweets.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-phone"></i>Enquire Now</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ HOW IT WORKS ═══ -->
+<section>
+  <div class="container">
+    <span class="sec-tag">How It Works</span>
+    <h2 class="sec-title">Simple. Fast. Trusted.</h2>
+    <p class="sec-sub">Getting a service or finding a buyer has never been easier in our region.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num"><i class="fas fa-phone"></i></div>
+        <h3>1. Contact Us</h3>
+        <p>WhatsApp or call us with your requirement — our team responds within 15 minutes during the day.</p>
+      </div>
+      <div class="step">
+        <div class="step-num"><i class="fas fa-handshake"></i></div>
+        <h3>2. We Connect You</h3>
+        <p>We match you with a verified local provider from your exact area — Donimalai, Sandur or nearby.</p>
+      </div>
+      <div class="step">
+        <div class="step-num"><i class="fas fa-star"></i></div>
+        <h3>3. Pay After Satisfaction</h3>
+        <p>Service done to your satisfaction — pay the provider directly only when you are happy with the work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STATS ═══ -->
+<div class="stats-strip">
+  <div class="stats-grid">
+    <div><span class="stat-n">200+</span><span class="stat-l">Registered Providers</span></div>
+    <div><span class="stat-n">16+</span><span class="stat-l">Service Categories</span></div>
+    <div><span class="stat-n">4+</span><span class="stat-l">Regions Covered</span></div>
+    <div><span class="stat-n">500+</span><span class="stat-l">Happy Customers</span></div>
+  </div>
+</div>
+
+<!-- ═══ REGISTER + ENQUIRY ═══ -->
+<section id="register" class="bg-light">
+  <div class="container">
+    <span class="sec-tag">Join DoniConnect</span>
+    <h2 class="sec-title">Register &amp; Grow Together</h2>
+    <div class="forms-wrap">
+
+      <!-- PROVIDER REGISTRATION -->
+      <div class="fbox">
+        <h2>Are you a provider or seller?</h2>
+        <p class="fsub">Join our growing network of local professionals in Donimalai &amp; Sandur — completely free to register!</p>
+        <form id="reg-form" novalidate>
+
+          <div class="fsec">Personal Details</div>
+          <div class="frow">
+            <div class="fg">
+              <label>Full Name *</label>
+              <input type="text" id="r-name" placeholder="e.g. Ramesh Kumar">
+              <span class="err">Please enter your full name</span>
+            </div>
+            <div class="fg">
+              <label>Gender</label>
+              <select><option value="">Select</option><option>Male</option><option>Female</option><option>Prefer not to say</option></select>
+            </div>
+          </div>
+          <div class="frow">
+            <div class="fg">
+              <label>Mobile Number *</label>
+              <div class="pfx-wrap"><span class="pfx">+91</span><input type="tel" id="r-mob" placeholder="9876543210" maxlength="10"></div>
+              <span class="err">Enter valid 10-digit number</span>
+            </div>
+            <div class="fg">
+              <label>Age</label>
+              <input type="number" min="18" max="70" placeholder="e.g. 28">
+            </div>
+          </div>
+          <div class="fg">
+            <label>WhatsApp Number</label>
+            <div class="pfx-wrap"><span class="pfx">+91</span><input type="tel" id="r-wa" placeholder="9876543210" maxlength="10"></div>
+            <label class="same-row"><input type="checkbox" id="same-cb">Same as mobile number</label>
+          </div>
+          <div class="frow">
+            <div class="fg">
+              <label>Email Address (optional)</label>
+              <input type="email" placeholder="you@email.com">
+            </div>
+            <div class="fg">
+              <label>Profile Photo</label>
+              <input type="file" accept="image/*">
+            </div>
+          </div>
+
+          <div class="fsec">Location Details</div>
+          <div class="frow">
+            <div class="fg">
+              <label>Area / Village *</label>
+              <select id="r-area">
+                <option value="">Select your area</option>
+                <option>Donimalai</option><option>Sandur</option><option>Hospet</option>
+                <option>Toranagallu</option><option>Kampli</option><option>Bellary</option><option>Other</option>
+              </select>
+              <span class="err">Please select your area</span>
+            </div>
+            <div class="fg">
+              <label>Pincode</label>
+              <input type="number" placeholder="e.g. 583118" maxlength="6">
+            </div>
+          </div>
+          <div class="fg">
+            <label>Full Address / Landmark</label>
+            <textarea placeholder="e.g. Near NMDC Gate 2, Donimalai Township, Sandur Taluk"></textarea>
+          </div>
+
+          <div class="fsec">Service / Business Details</div>
+          <div class="fg">
+            <label>Categories You Offer (select all that apply)</label>
+            <div class="cb-group">
+              <label><input type="checkbox"> Vehicles</label>
+              <label><input type="checkbox"> Electronics</label>
+              <label><input type="checkbox"> Furniture &amp; Appliances</label>
+              <label><input type="checkbox"> Clothing &amp; Fashion</label>
+              <label><input type="checkbox"> Scrap &amp; Recyclables</label>
+              <label><input type="checkbox"> Plumbing</label>
+              <label><input type="checkbox"> Civil &amp; Masonry</label>
+              <label><input type="checkbox"> Electrical Work</label>
+              <label><input type="checkbox"> Carpentry</label>
+              <label><input type="checkbox"> AC &amp; Appliance Repair</label>
+              <label><input type="checkbox"> Cleaning Services</label>
+              <label><input type="checkbox"> Design Services</label>
+              <label><input type="checkbox"> Photo &amp; Video Editing</label>
+              <label><input type="checkbox"> Typing &amp; DTP</label>
+              <label><input type="checkbox"> Tuition &amp; Coaching</label>
+              <label><input type="checkbox"> Home Food &amp; Tiffin</label>
+            </div>
+          </div>
+          <div class="fg">
+            <label>Describe Your Services</label>
+            <textarea placeholder="e.g. I fix pipe leaks, install new taps, do bathroom plumbing for new construction..."></textarea>
+          </div>
+          <div class="frow">
+            <div class="fg">
+              <label>Years of Experience</label>
+              <select>
+                <option value="">Select</option>
+                <option>Less than 1 year</option><option>1–3 years</option>
+                <option>3–5 years</option><option>5+ years</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label>Do you have a shop / office?</label>
+              <div class="rb-group" style="margin-top:.4rem">
+                <label><input type="radio" name="shop" value="yes" onchange="shopToggle(true)"> Yes</label>
+                <label><input type="radio" name="shop" value="no" onchange="shopToggle(false)" checked> No</label>
+                <label><input type="radio" name="shop" value="home" onchange="shopToggle(false)"> Work from Home</label>
+              </div>
+            </div>
+          </div>
+          <div class="fg" id="shop-row">
+            <label>Shop / Business Name</label>
+            <input type="text" placeholder="e.g. Ravi Electricals, Sandur">
+          </div>
+          <div class="fg">
+            <label>Service Area Coverage</label>
+            <div class="cb-group">
+              <label><input type="checkbox"> Donimalai</label>
+              <label><input type="checkbox"> Sandur</label>
+              <label><input type="checkbox"> Hospet</label>
+              <label><input type="checkbox"> Toranagallu</label>
+              <label><input type="checkbox"> Bellary</label>
+              <label><input type="checkbox"> All of above</label>
+            </div>
+          </div>
+
+          <div class="fsec">Pricing &amp; Availability</div>
+          <div class="frow">
+            <div class="fg">
+              <label>Pricing Type</label>
+              <select>
+                <option value="">Select</option>
+                <option>Fixed Rate</option><option>Negotiable</option>
+                <option>Per Visit</option><option>Per Project</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label>Approximate Charges</label>
+              <input type="text" placeholder="e.g. ₹200 per visit">
+            </div>
+          </div>
+          <div class="fg">
+            <label>Available Days</label>
+            <div class="cb-group">
+              <label><input type="checkbox"> Mon</label><label><input type="checkbox"> Tue</label>
+              <label><input type="checkbox"> Wed</label><label><input type="checkbox"> Thu</label>
+              <label><input type="checkbox"> Fri</label><label><input type="checkbox"> Sat</label>
+              <label><input type="checkbox"> Sun</label>
+            </div>
+          </div>
+          <div class="frow">
+            <div class="fg">
+              <label>Available Timing</label>
+              <select>
+                <option>Morning 6AM–12PM</option><option>Afternoon 12–6PM</option>
+                <option>Evening 6–10PM</option><option>All Day</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label>Accept Urgent / Emergency Calls?</label>
+              <div class="rb-group" style="margin-top:.4rem">
+                <label><input type="radio" name="urgent" value="yes"> Yes</label>
+                <label><input type="radio" name="urgent" value="no"> No</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="fsec">Identity &amp; Trust</div>
+          <div class="frow">
+            <div class="fg">
+              <label>Aadhar Number (optional, kept confidential)</label>
+              <input type="password" placeholder="XXXX XXXX XXXX" maxlength="12">
+            </div>
+            <div class="fg">
+              <label>ID Proof Upload (optional)</label>
+              <input type="file" accept="image/*,.pdf">
+            </div>
+          </div>
+          <div class="fg">
+            <label>Work Photos / Certificates (optional)</label>
+            <input type="file" accept="image/*" multiple>
+          </div>
+          <div class="frow">
+            <div class="fg">
+              <label>Languages Spoken</label>
+              <div class="cb-group">
+                <label><input type="checkbox"> Kannada</label>
+                <label><input type="checkbox"> Telugu</label>
+                <label><input type="checkbox"> Hindi</label>
+                <label><input type="checkbox"> English</label>
+                <label><input type="checkbox"> Urdu</label>
+              </div>
+            </div>
+            <div class="fg">
+              <label>How did you hear about us?</label>
+              <select>
+                <option value="">Select</option>
+                <option>WhatsApp</option><option>Friend / Family</option>
+                <option>Facebook</option><option>Google</option><option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="fg">
+            <label>About Yourself (max 300 characters)</label>
+            <textarea id="bio" maxlength="300" placeholder="Tell customers about your skills, experience and why they should trust you..." rows="3" oninput="bioCount()"></textarea>
+            <div class="char-row"><span id="bio-n">0</span>/300</div>
+          </div>
+
+          <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i>Submit Registration</button>
+          <p class="submit-note">We'll verify your details and contact you within 24 hours via WhatsApp</p>
+          <div class="ok-msg" id="reg-ok"><i class="fas fa-circle-check"></i> &nbsp;Registration submitted successfully! Welcome to DoniConnect — we'll WhatsApp you within 24 hours.</div>
+        </form>
+      </div>
+
+      <!-- CUSTOMER ENQUIRY -->
+      <div id="contact">
+        <div class="fbox">
+          <h2>Need a service?</h2>
+          <p class="fsub">Tell us what you need — we'll connect you with the right local provider within the hour.</p>
+          <form id="enq-form" novalidate>
+            <div class="fg">
+              <label>Your Name *</label>
+              <input type="text" id="e-name" placeholder="e.g. Lakshmi Devi">
+              <span class="err">Please enter your name</span>
+            </div>
+            <div class="fg">
+              <label>Mobile Number *</label>
+              <div class="pfx-wrap"><span class="pfx">+91</span><input type="tel" id="e-mob" placeholder="9876543210" maxlength="10"></div>
+              <span class="err">Enter valid 10-digit number</span>
+            </div>
+            <div class="fg">
+              <label>Service Needed *</label>
+              <select id="e-svc">
+                <option value="">Select a service</option>
+                <option>Vehicles</option><option>Electronics &amp; Gadgets</option>
+                <option>Furniture &amp; Appliances</option><option>Clothing &amp; Fashion</option>
+                <option>Scrap &amp; Recyclables</option><option>Plumbing</option>
+                <option>Civil &amp; Masonry</option><option>Electrical Work</option>
+                <option>Carpentry</option><option>AC &amp; Appliance Repair</option>
+                <option>Cleaning Services</option><option>Design Services</option>
+                <option>Photo &amp; Video Editing</option><option>Typing &amp; DTP</option>
+                <option>Tuition &amp; Coaching</option><option>Home Food &amp; Tiffin</option>
+              </select>
+              <span class="err">Please select a service</span>
+            </div>
+            <div class="fg">
+              <label>Your Area *</label>
+              <select id="e-area">
+                <option value="">Select your area</option>
+                <option>Donimalai</option><option>Sandur</option><option>Hospet</option>
+                <option>Toranagallu</option><option>Kampli</option><option>Bellary</option><option>Other</option>
+              </select>
+              <span class="err">Please select your area</span>
+            </div>
+            <div class="fg">
+              <label>Message / Details</label>
+              <textarea placeholder="Describe what you need — e.g. Kitchen pipe is leaking badly, need urgent fix today" rows="3"></textarea>
+            </div>
+            <div class="fg">
+              <label>Preferred Contact Time</label>
+              <select>
+                <option>Morning (6AM–12PM)</option><option>Afternoon (12–6PM)</option>
+                <option>Evening (6–10PM)</option><option>Anytime</option>
+              </select>
+            </div>
+            <button type="submit" class="submit-btn"><i class="fas fa-headset"></i>Send Enquiry</button>
+            <div class="ok-msg" id="enq-ok"><i class="fas fa-circle-check"></i> &nbsp;Enquiry received! We'll call or WhatsApp you very soon. Thank you!</div>
+          </form>
+
+          <!-- DIRECT CONTACT -->
+          <div style="margin-top:1.5rem;padding-top:1.2rem;border-top:1px solid var(--border)">
+            <p style="font-size:.8rem;font-weight:600;margin-bottom:.7rem;color:var(--text)">Or reach us directly:</p>
+            <a href="https://wa.me/919686324765" target="_blank" style="display:flex;align-items:center;gap:.5rem;background:#25D366;color:#fff;padding:.65rem 1rem;border-radius:9px;font-weight:600;font-size:.85rem;margin-bottom:.5rem;transition:.2s">
+              <i class="fab fa-whatsapp" style="font-size:1.1rem"></i>WhatsApp: +91 96863 24765
+            </a>
+            <a href="tel:+919686324765" style="display:flex;align-items:center;gap:.5rem;background:var(--green-light);color:var(--green-dark);padding:.65rem 1rem;border-radius:9px;font-weight:600;font-size:.85rem;margin-bottom:.5rem">
+              <i class="fas fa-phone"></i>Call: +91 96863 24765
+            </a>
+            <a href="mailto:rameshkoppal055@gmail.com" style="display:flex;align-items:center;gap:.5rem;background:#f2f2f2;color:var(--text);padding:.65rem 1rem;border-radius:9px;font-weight:600;font-size:.85rem">
+              <i class="fas fa-envelope"></i>rameshkoppal055@gmail.com
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TESTIMONIALS ═══ -->
+<section>
+  <div class="container">
+    <span class="sec-tag">What People Say</span>
+    <h2 class="sec-title">Trusted by Our Community</h2>
+    <p class="sec-sub">Real experiences from real people in Donimalai, Sandur and Hospet.</p>
+    <div class="test-grid">
+      <div class="tcard">
+        <div class="stars">★★★★★</div>
+        <p class="ttext">"Got my bike fixed and sold my old sofa within 2 days. DoniConnect is amazing! Never thought local service could be this fast and easy."</p>
+        <div class="tauthor">
+          <div class="tavatar" style="background:var(--green)">RK</div>
+          <div><div class="tname">Ravi Kumar</div><div class="tloc"><i class="fas fa-map-marker-alt" style="color:var(--green);font-size:.68rem"></i> Sandur</div></div>
+        </div>
+      </div>
+      <div class="tcard">
+        <div class="stars">★★★★★</div>
+        <p class="ttext">"The plumber came within 1 hour of my WhatsApp message. Very professional work and a very reasonable price. Highly recommend DoniConnect!"</p>
+        <div class="tauthor">
+          <div class="tavatar" style="background:#D85A30">LD</div>
+          <div><div class="tname">Lakshmi Devi</div><div class="tloc"><i class="fas fa-map-marker-alt" style="color:var(--green);font-size:.68rem"></i> Donimalai</div></div>
+        </div>
+      </div>
+      <div class="tcard">
+        <div class="stars">★★★★<span style="color:#ddd">★</span></div>
+        <p class="ttext">"I registered as an electrician and got 3 customers in my first week itself! This platform is a great opportunity for workers like us in the NMDC area."</p>
+        <div class="tauthor">
+          <div class="tavatar" style="background:#7F77DD">SN</div>
+          <div><div class="tname">Suresh (NMDC Worker)</div><div class="tloc"><i class="fas fa-map-marker-alt" style="color:var(--green);font-size:.68rem"></i> Hospet</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="fg-grid">
+    <div>
+      <div class="fb-logo"><i class="fas fa-house-medical"></i>DoniConnect</div>
+      <p class="fb-tag kn">ನಮ್ಮ ಊರು, ನಮ್ಮ ಸೇವೆ — Our Town, Our Service</p>
+      <div class="fc">
+        <a href="tel:+919686324765"><i class="fas fa-phone"></i> +91 96863 24765</a>
+        <a href="mailto:rameshkoppal055@gmail.com"><i class="fas fa-envelope"></i> rameshkoppal055@gmail.com</a>
+        <a href="https://wa.me/919686324765" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Us Now</a>
+      </div>
+      <div class="socials">
+        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/919686324765" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div>
+      <div class="fh">Quick Links</div>
+      <ul class="fl">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#services">Buy &amp; Sell</a></li>
+        <li><a href="#register">Register</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="fh">Regions Served</div>
+      <ul class="fl">
+        <li><a href="#">Donimalai</a></li>
+        <li><a href="#">Sandur</a></li>
+        <li><a href="#">Hospet</a></li>
+        <li><a href="#">Toranagallu</a></li>
+        <li><a href="#">Kampli</a></li>
+        <li><a href="#">Bellary Belt</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="fh">Top Services</div>
+      <ul class="fl">
+        <li><a href="#">Plumbing</a></li>
+        <li><a href="#">Electrical Work</a></li>
+        <li><a href="#">Civil &amp; Masonry</a></li>
+        <li><a href="#">Design Services</a></li>
+        <li><a href="#">Second-Hand Vehicles</a></li>
+        <li><a href="#">Electronics</a></li>
+        <li><a href="#">Home Tiffin</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="fbot">
+    <span>© 2025 DoniConnect. Made with ❤️ for Donimalai &amp; Sandur</span>
+    <span>Powered by the community, for the community 🌿</span>
+  </div>
+</footer>
+
+<!-- ═══ WHATSAPP FLOAT ═══ -->
+<a href="https://wa.me/919686324765" class="wa-btn" target="_blank" title="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+// Hamburger menu
+const burger=document.getElementById('burger'),mob=document.getElementById('mob-menu');
+burger.addEventListener('click',()=>mob.classList.toggle('open'));
+document.querySelectorAll('.mob-menu a').forEach(a=>a.addEventListener('click',()=>mob.classList.remove('open')));
+
+// Same-as-mobile checkbox
+document.getElementById('same-cb').addEventListener('change',function(){
+  const wa=document.getElementById('r-wa');
+  if(this.checked){
+    wa.value=document.getElementById('r-mob').value;
+    wa.readOnly=true;
+    document.getElementById('r-mob').addEventListener('input',syncWa);
+  } else {
+    wa.readOnly=false;
+    document.getElementById('r-mob').removeEventListener('input',syncWa);
+  }
+});
+function syncWa(){document.getElementById('r-wa').value=document.getElementById('r-mob').value;}
+
+// Shop name toggle
+function shopToggle(show){document.getElementById('shop-row').style.display=show?'block':'none';}
+
+// Bio character counter
+function bioCount(){document.getElementById('bio-n').textContent=document.getElementById('bio').value.length;}
+
+// Enquire buttons scroll
+function scrollTo(id){document.querySelector(id).scrollIntoView({behavior:'smooth'});}
+
+// Form validation helper
+function validate(id,cond){
+  const el=document.getElementById(id);
+  const fg=el?el.closest('.fg'):null;
+  if(!fg)return cond;
+  if(!cond){fg.classList.add('bad');return false;}
+  fg.classList.remove('bad');return true;
+}
+
+// Registration form submit
+document.getElementById('reg-form').addEventListener('submit',function(e){
+  e.preventDefault();
+  const n=document.getElementById('r-name').value.trim();
+  const m=document.getElementById('r-mob').value.trim();
+  const a=document.getElementById('r-area').value;
+  let ok=true;
+  if(!n){document.getElementById('r-name').closest('.fg').classList.add('bad');ok=false;}
+  else document.getElementById('r-name').closest('.fg').classList.remove('bad');
+  if(!/^\d{10}$/.test(m)){document.getElementById('r-mob').closest('.fg').classList.add('bad');ok=false;}
+  else document.getElementById('r-mob').closest('.fg').classList.remove('bad');
+  if(!a){document.getElementById('r-area').closest('.fg').classList.add('bad');ok=false;}
+  else document.getElementById('r-area').closest('.fg').classList.remove('bad');
+  if(ok){
+    const s=document.getElementById('reg-ok');
+    s.style.display='block';
+    this.reset();
+    document.getElementById('bio-n').textContent='0';
+    s.scrollIntoView({behavior:'smooth',block:'center'});
+  }
+});
+
+// Enquiry form submit
+document.getElementById('enq-form').addEventListener('submit',function(e){
+  e.preventDefault();
+  const n=document.getElementById('e-name').value.trim();
+  const m=document.getElementById('e-mob').value.trim();
+  const sv=document.getElementById('e-svc').value;
+  const ar=document.getElementById('e-area').value;
+  let ok=true;
+  if(!n){document.getElementById('e-name').closest('.fg').classList.add('bad');ok=false;}
+  else document.getElementById('e-name').closest('.fg').classList.remove('bad');
+  if(!/^\d{10}$/.test(m)){document.getElementById('e-mob').closest('.fg').classList.add('bad');ok=false;}
+  else document.getElementById('e-mob').closest('.fg').classList.remove('bad');
+  if(!sv){document.getElementById('e-svc').closest('.fg').classList.add('bad');ok=false;}
+  else document.getElementById('e-svc').closest('.fg').classList.remove('bad');
+  if(!ar){document.getElementById('e-area').closest('.fg').classList.add('bad');ok=false;}
+  else document.getElementById('e-area').closest('.fg').classList.remove('bad');
+  if(ok){
+    document.getElementById('enq-ok').style.display='block';
+    this.reset();
+  }
+});
+</script>
+</body>
+</html>
