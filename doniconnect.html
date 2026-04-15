@@ -48,14 +48,14 @@ nav{position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px solid v
 .hero::before{width:340px;height:340px;top:-80px;right:-80px}
 .hero::after{width:260px;height:260px;bottom:-100px;left:-60px}
 .hero-inner{max-width:780px;margin:0 auto;position:relative;z-index:1}
-.hero-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);border-radius:50px;padding:.3rem 1rem;font-size:.78rem;font-weight:600;margin-bottom:1.3rem;letter-spacing:.04em}
+.hero-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);border-radius:50px;padding:.3rem 1rem;font-size:.78rem;font-weight:600}
 .hero h1{font-size:clamp(1.75rem,5vw,2.9rem);font-weight:800;line-height:1.2;margin-bottom:.7rem}
 .hero-kn{font-size:1.05rem;opacity:.9;margin-bottom:.5rem}
 .hero p{font-size:.95rem;opacity:.82;margin-bottom:2rem;max-width:540px;margin-left:auto;margin-right:auto}
 .hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:2rem}
-.btn-white{background:#fff;color:var(--green-dark);padding:.72rem 1.8rem;border-radius:9px;font-weight:700;font-size:.92rem;border:none;cursor:pointer;transition:.2s;display:inline-flex;align-items:center;gap:7px}
+.btn-white{background:#fff;color:var(--green-dark);padding:.72rem 1.8rem;border-radius:9px;font-weight:700;font-size:.92rem;border:none;cursor:pointer;transition:.2s;display:inline-flex;align-items:center;gap:.5rem}
 .btn-white:hover{background:var(--cream)}
-.btn-border{background:transparent;color:#fff;padding:.72rem 1.8rem;border-radius:9px;font-weight:700;font-size:.92rem;border:2px solid rgba(255,255,255,.65);cursor:pointer;transition:.2s;display:inline-flex;align-items:center;gap:7px}
+.btn-border{background:transparent;color:#fff;padding:.72rem 1.8rem;border-radius:9px;font-weight:700;font-size:.92rem;border:2px solid rgba(255,255,255,.65);cursor:pointer;transition:.2s;display:inline-flex;align-items:center;gap:.5rem}
 .btn-border:hover{background:rgba(255,255,255,.12)}
 .badges{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem}
 .badge{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.28);border-radius:50px;padding:.28rem .85rem;font-size:.76rem;font-weight:500}
@@ -63,14 +63,14 @@ nav{position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px solid v
 /* ── SECTION BASE ── */
 section{padding:4rem 1.2rem}
 .container{max-width:1200px;margin:0 auto}
-.sec-tag{display:inline-block;background:var(--green-light);color:var(--green-dark);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.28rem .85rem;border-radius:50px;margin-bottom:.8rem}
+.sec-tag{display:inline-block;background:var(--green-light);color:var(--green-dark);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.28rem .85rem;border-radius:5px}
 .sec-title{font-size:clamp(1.45rem,3vw,2.1rem);font-weight:800;margin-bottom:.45rem}
 .sec-sub{color:var(--muted);font-size:.92rem;max-width:540px;margin-bottom:2.5rem}
 .bg-light{background:#f8f8f8}
 .bg-cream{background:var(--cream)}
 
 /* ── SERVICES ── */
-.cat-label{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green);border-bottom:2px solid var(--green-light);padding-bottom:.45rem;margin:2.2rem 0 1rem;display:flex;align-items:center;gap:.5rem}
+.cat-label{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green);border-bottom:2px solid var(--green-light);padding-bottom:.45rem;margin:2.2rem 0 1rem;display:block}
 .cat-label:first-of-type{margin-top:0}
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
 .scard{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:1.3rem;transition:.22s;cursor:default}
@@ -78,7 +78,7 @@ section{padding:4rem 1.2rem}
 .scard-icon{font-size:2rem;margin-bottom:.55rem;display:block}
 .scard h3{font-size:.93rem;font-weight:700;margin-bottom:.28rem}
 .scard p{font-size:.78rem;color:var(--muted);margin-bottom:.85rem;line-height:1.45}
-.enquire-btn{display:inline-flex;align-items:center;gap:5px;background:var(--green-light);color:var(--green-dark);font-size:.74rem;font-weight:600;padding:.3rem .85rem;border-radius:7px;transition:.2s;border:none;cursor:pointer;font-family:'Poppins',sans-serif}
+.enquire-btn{display:inline-flex;align-items:center;gap:5px;background:var(--green-light);color:var(--green-dark);font-size:.74rem;font-weight:600;padding:.3rem .85rem;border-radius:7px;transition:.2s;border:none;cursor:pointer}
 .scard:hover .enquire-btn{background:var(--green);color:#fff}
 
 /* ── HOW IT WORKS ── */
@@ -104,7 +104,7 @@ section{padding:4rem 1.2rem}
 .frow{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
 .fg{margin-bottom:.75rem}
 .fg label{display:block;font-size:.78rem;font-weight:600;margin-bottom:.28rem}
-.fg input,.fg select,.fg textarea{width:100%;border:1.5px solid var(--border);border-radius:8px;padding:.58rem .8rem;font-size:.82rem;font-family:'Poppins',sans-serif;color:var(--text);background:#fff;transition:.2s;outline:none}
+.fg input,.fg select,.fg textarea{width:100%;border:1.5px solid var(--border);border-radius:8px;padding:.58rem .8rem;font-size:.82rem;font-family:'Poppins',sans-serif;color:var(--text);background:#fff}
 .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--green)}
 .fg textarea{resize:vertical;min-height:76px}
 .fg .err{color:var(--red);font-size:.72rem;margin-top:.22rem;display:none}
@@ -120,7 +120,7 @@ section{padding:4rem 1.2rem}
 .same-row{display:flex;align-items:center;gap:.35rem;font-size:.78rem;cursor:pointer;margin-top:.3rem}
 .same-row input{width:auto;accent-color:var(--green)}
 #shop-row{display:none}
-.submit-btn{width:100%;background:var(--green);color:#fff;border:none;border-radius:9px;padding:.88rem;font-size:.98rem;font-weight:700;cursor:pointer;transition:.2s;margin-top:1rem;font-family:'Poppins',sans-serif;display:flex;align-items:center;justify-content:center;gap:8px}
+.submit-btn{width:100%;background:var(--green);color:#fff;border:none;border-radius:9px;padding:.88rem;font-size:.98rem;font-weight:700;cursor:pointer;transition:.2s;margin-top:1rem;font-family:'Poppins',sans-serif}
 .submit-btn:hover{background:var(--green-dark)}
 .submit-note{font-size:.73rem;color:var(--muted);text-align:center;margin-top:.5rem}
 .ok-msg{display:none;background:#E1F5EE;border:1px solid var(--green);border-radius:9px;padding:1rem 1.2rem;color:var(--green-dark);font-size:.88rem;font-weight:600;margin-top:1rem;text-align:center}
@@ -155,9 +155,9 @@ footer{background:#0b1a14;color:#bbb;padding:3rem 1.2rem 1.5rem}
 .fbot{max-width:1200px;margin:.2rem auto 0;padding-top:1.2rem;display:flex;justify-content:space-between;font-size:.76rem;opacity:.55;flex-wrap:wrap;gap:.5rem}
 
 /* ── WA FLOAT ── */
-.wa-btn{position:fixed;bottom:22px;right:22px;z-index:999;background:#25D366;color:#fff;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;text-decoration:none;transition:.2s}
+.wa-btn{position:fixed;bottom:22px;right:22px;z-index:999;background:#25D366;color:#fff;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;transition:.2s}
 .wa-btn:hover{transform:scale(1.1)}
-.wa-btn::before{content:'Chat with DoniConnect';position:absolute;right:66px;background:#111;color:#fff;font-size:.73rem;padding:.3rem .7rem;border-radius:6px;white-space:nowrap;opacity:0;pointer-events:none;transition:.2s;font-family:'Poppins',sans-serif}
+.wa-btn::before{content:'Chat with DoniConnect';position:absolute;right:66px;background:#111;color:#fff;font-size:.73rem;padding:.3rem .7rem;border-radius:6px;white-space:nowrap;opacity:0;pointer-events:none;transition:.2s}
 .wa-btn:hover::before{opacity:1}
 @keyframes wa-pulse{0%,100%{box-shadow:0 0 0 0 rgba(37,211,102,.4)}70%{box-shadow:0 0 0 12px rgba(37,211,102,0)}}
 .wa-btn{animation:wa-pulse 2.2s infinite}
@@ -215,7 +215,7 @@ footer{background:#0b1a14;color:#bbb;padding:3rem 1.2rem 1.5rem}
   <div class="hero-inner">
     <div class="hero-tag"><i class="fas fa-map-marker-alt"></i>Serving Donimalai · Sandur · Hospet · Bellary Belt</div>
     <h1>Donimalai &amp; Sandur's Trusted Local Platform</h1>
-    <p class="hero-kn kn">ನಮ್ಮ ಊರು, ನಮ್ಮ ಸೇವೆ — Our Town, Our Service</p>
+    <p class="hero-kn kn">ನಮ್ಮ ಊರು, ನಮ್ಮ ಸೇವ��� — Our Town, Our Service</p>
     <p>Buy, Sell, Book Services — All in One Place.<br>Connecting our community every single day.</p>
     <div class="hero-btns">
       <a href="#contact" class="btn-white"><i class="fas fa-calendar-check"></i>Book a Service</a>
@@ -240,30 +240,30 @@ footer{background:#0b1a14;color:#bbb;padding:3rem 1.2rem 1.5rem}
 
     <div class="cat-label"><i class="fas fa-tag"></i> Reselling &amp; Products</div>
     <div class="grid3">
-      <div class="scard"><span class="scard-icon">🏍️</span><h3>Vehicles</h3><p>Second-hand bikes, scooters, mopeds and cars at the best local prices. Verified by our team.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-phone"></i>Enquire Now</button></div>
-      <div class="scard"><span class="scard-icon">📱</span><h3>Electronics &amp; Gadgets</h3><p>Phones, laptops, cameras, earphones and smartwatches — affordable and tested.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-phone"></i>Enquire Now</button></div>
-      <div class="scard"><span class="scard-icon">🛋️</span><h3>Furniture &amp; Appliances</h3><p>Fans, coolers, tables, chairs, geysers and utensils in good condition at low prices.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-phone"></i>Enquire Now</button></div>
-      <div class="scard"><span class="scard-icon">👗</span><h3>Clothing &amp; Fashion</h3><p>Branded clothes, thrift items, kids wear, sarees and jewellery sets — best local deals.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-phone"></i>Enquire Now</button></div>
-      <div class="scard"><span class="scard-icon">♻️</span><h3>Scrap &amp; Recyclables</h3><p>Metal, paper, e-waste and plastic collection. Best rates from verified local buyers.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-phone"></i>Enquire Now</button></div>
+      <div class="scard"><span class="scard-icon">🏍️</span><h3>Vehicles</h3><p>Second-hand bikes, scooters, mopeds and cars at the best local prices. Verified by our team.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-envelope"></i>Enquire</button></div>
+      <div class="scard"><span class="scard-icon">📱</span><h3>Electronics &amp; Gadgets</h3><p>Phones, laptops, cameras, earphones and smartwatches — affordable and tested.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-envelope"></i>Enquire</button></div>
+      <div class="scard"><span class="scard-icon">🛋️</span><h3>Furniture &amp; Appliances</h3><p>Fans, coolers, tables, chairs, geysers and utensils in good condition at low prices.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-envelope"></i>Enquire</button></div>
+      <div class="scard"><span class="scard-icon">👗</span><h3>Clothing &amp; Fashion</h3><p>Branded clothes, thrift items, kids wear, sarees and jewellery sets — best local deals.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-envelope"></i>Enquire</button></div>
+      <div class="scard"><span class="scard-icon">♻️</span><h3>Scrap &amp; Recyclables</h3><p>Metal, paper, e-waste and plastic collection. Best rates from verified local buyers.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-envelope"></i>Enquire</button></div>
     </div>
 
     <div class="cat-label"><i class="fas fa-wrench"></i> Home Repair &amp; Skilled Trades</div>
     <div class="grid3">
-      <div class="scard"><span class="scard-icon">🔧</span><h3>Plumbing</h3><p>Pipe leaks, tap repairs, tank cleaning and new pipe fitting. Fast local response guaranteed.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-phone"></i>Enquire Now</button></div>
-      <div class="scard"><span class="scard-icon">🏗️</span><h3>Civil &amp; Masonry</h3><p>Plastering, tiles fixing, waterproofing, wall painting and POP work by experienced masons.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-phone"></i>Enquire Now</button></div>
-      <div class="scard"><span class="scard-icon">⚡</span><h3>Electrical Work</h3><p>Wiring, switch repairs, fan fitting, inverter service, CCTV and DTH installation.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-phone"></i>Enquire Now</button></div>
-      <div class="scard"><span class="scard-icon">🪵</span><h3>Carpentry</h3><p>Door and window repairs, furniture polishing, custom shelves and rack making.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-phone"></i>Enquire Now</button></div>
-      <div class="scard"><span class="scard-icon">❄️</span><h3>AC &amp; Appliance Repair</h3><p>AC servicing and gas refill, washing machine, fridge and geyser repairs.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-phone"></i>Enquire Now</button></div>
-      <div class="scard"><span class="scard-icon">🧹</span><h3>Cleaning Services</h3><p>Deep home cleaning, sofa and carpet cleaning, post-construction and office cleaning.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-phone"></i>Enquire Now</button></div>
+      <div class="scard"><span class="scard-icon">🔧</span><h3>Plumbing</h3><p>Pipe leaks, tap repairs, tank cleaning and new pipe fitting. Fast local response guaranteed.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-envelope"></i>Enquire</button></div>
+      <div class="scard"><span class="scard-icon">🏗️</span><h3>Civil &amp; Masonry</h3><p>Plastering, tiles fixing, waterproofing, wall painting and POP work by experienced masons.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-envelope"></i>Enquire</button></div>
+      <div class="scard"><span class="scard-icon">⚡</span><h3>Electrical Work</h3><p>Wiring, switch repairs, fan fitting, inverter service, CCTV and DTH installation.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-envelope"></i>Enquire</button></div>
+      <div class="scard"><span class="scard-icon">🪵</span><h3>Carpentry</h3><p>Door and window repairs, furniture polishing, custom shelves and rack making.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-envelope"></i>Enquire</button></div>
+      <div class="scard"><span class="scard-icon">❄️</span><h3>AC &amp; Appliance Repair</h3><p>AC servicing and gas refill, washing machine, fridge and geyser repairs.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-envelope"></i>Enquire</button></div>
+      <div class="scard"><span class="scard-icon">🧹</span><h3>Cleaning Services</h3><p>Deep home cleaning, sofa and carpet cleaning, post-construction and office cleaning.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-envelope"></i>Enquire</button></div>
     </div>
 
     <div class="cat-label"><i class="fas fa-palette"></i> Creative &amp; Digital Services</div>
     <div class="grid3">
-      <div class="scard"><span class="scard-icon">🎨</span><h3>Design Services</h3><p>Wedding invitations, banners, flex boards, logos, visiting cards, menus and brochures.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-phone"></i>Enquire Now</button></div>
-      <div class="scard"><span class="scard-icon">📸</span><h3>Photo &amp; Video Editing</h3><p>Wedding album editing, reels and short videos, background removal and retouching.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-phone"></i>Enquire Now</button></div>
-      <div class="scard"><span class="scard-icon">⌨️</span><h3>Typing &amp; DTP</h3><p>Affidavits, form filling, government applications, resume design and translation work.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-phone"></i>Enquire Now</button></div>
-      <div class="scard"><span class="scard-icon">🎓</span><h3>Tuition &amp; Coaching</h3><p>School subjects, computer and MS Office classes, spoken English and hobby coaching.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-phone"></i>Enquire Now</button></div>
-      <div class="scard"><span class="scard-icon">🍱</span><h3>Home Food &amp; Tiffin</h3><p>Daily tiffin delivery, small event catering, homemade pickles, snacks and sweets.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-phone"></i>Enquire Now</button></div>
+      <div class="scard"><span class="scard-icon">🎨</span><h3>Design Services</h3><p>Wedding invitations, banners, flex boards, logos, visiting cards, menus and brochures.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-envelope"></i>Enquire</button></div>
+      <div class="scard"><span class="scard-icon">📸</span><h3>Photo &amp; Video Editing</h3><p>Wedding album editing, reels and short videos, background removal and retouching.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-envelope"></i>Enquire</button></div>
+      <div class="scard"><span class="scard-icon">⌨️</span><h3>Typing &amp; DTP</h3><p>Affidavits, form filling, government applications, resume design and translation work.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-envelope"></i>Enquire</button></div>
+      <div class="scard"><span class="scard-icon">🎓</span><h3>Tuition &amp; Coaching</h3><p>School subjects, computer and MS Office classes, spoken English and hobby coaching.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-envelope"></i>Enquire</button></div>
+      <div class="scard"><span class="scard-icon">🍱</span><h3>Home Food &amp; Tiffin</h3><p>Daily tiffin delivery, small event catering, homemade pickles, snacks and sweets.</p><button class="enquire-btn" onclick="scrollTo('#contact')"><i class="fas fa-envelope"></i>Enquire</button></div>
     </div>
   </div>
 </section>
@@ -583,13 +583,13 @@ footer{background:#0b1a14;color:#bbb;padding:3rem 1.2rem 1.5rem}
           <!-- DIRECT CONTACT -->
           <div style="margin-top:1.5rem;padding-top:1.2rem;border-top:1px solid var(--border)">
             <p style="font-size:.8rem;font-weight:600;margin-bottom:.7rem;color:var(--text)">Or reach us directly:</p>
-            <a href="https://wa.me/919686324765" target="_blank" style="display:flex;align-items:center;gap:.5rem;background:#25D366;color:#fff;padding:.65rem 1rem;border-radius:9px;font-weight:600;font-size:.85rem;margin-bottom:.5rem;transition:.2s">
+            <a href="https://wa.me/919686324765" target="_blank" style="display:flex;align-items:center;gap:.5rem;background:#25D366;color:#fff;padding:.65rem 1rem;border-radius:9px;font-weight:600;font-size:.8rem;margin-bottom:.5rem;transition:.2s">
               <i class="fab fa-whatsapp" style="font-size:1.1rem"></i>WhatsApp: +91 96863 24765
             </a>
-            <a href="tel:+919686324765" style="display:flex;align-items:center;gap:.5rem;background:var(--green-light);color:var(--green-dark);padding:.65rem 1rem;border-radius:9px;font-weight:600;font-size:.85rem;margin-bottom:.5rem">
+            <a href="tel:+919686324765" style="display:flex;align-items:center;gap:.5rem;background:var(--green-light);color:var(--green-dark);padding:.65rem 1rem;border-radius:9px;font-weight:600;font-size:.8rem;margin-bottom:.5rem;transition:.2s">
               <i class="fas fa-phone"></i>Call: +91 96863 24765
             </a>
-            <a href="mailto:rameshkoppal055@gmail.com" style="display:flex;align-items:center;gap:.5rem;background:#f2f2f2;color:var(--text);padding:.65rem 1rem;border-radius:9px;font-weight:600;font-size:.85rem">
+            <a href="mailto:rameshkoppal055@gmail.com" style="display:flex;align-items:center;gap:.5rem;background:#f2f2f2;color:var(--text);padding:.65rem 1rem;border-radius:9px;font-weight:600;font-size:.8rem;transition:.2s">
               <i class="fas fa-envelope"></i>rameshkoppal055@gmail.com
             </a>
           </div>
